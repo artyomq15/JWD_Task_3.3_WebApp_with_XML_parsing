@@ -19,10 +19,10 @@ public class TariffController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String parserType = request.getParameter("set_parser");
-        if (ParserType.contains(parserType)){
+        if (ParserType.contains(parserType)) {
             request.getSession(true).setAttribute("parser", parserType);
             response.sendRedirect("/TariffController?page=1");
-        } else{
+        } else {
             System.out.println("not a parser");
         }
 
@@ -31,20 +31,33 @@ public class TariffController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Object parserObj = request.getSession(false).getAttribute("parser");
         String parserString;
-        if (parserObj != null){
+        if (parserObj != null) {
             parserString = String.valueOf(parserObj);
             ParserType parserType = ParserType.valueOf(parserString.toUpperCase().trim());
-            try{
+            try {
                 List<Tariff> tariffList = ServiceFactory.getInstance().getTariffService().getTariffs(parserType);
 
                 Pagination pagination = new Pagination();
 
 
                 String current = request.getParameter("page");
-                if (current != null){
-                    pagination.setCurrent(Integer.parseInt(current));
+                int currentPage;
+                if (current != null) {
+                    currentPage = Integer.parseInt(current);
+
+                    pagination.setCurrent(currentPage);
+                    pagination.setLast(PaginationHelper.getLastPageNumber(tariffList.size()));
+
+                    if (currentPage != pagination.getFirst()) {
+                        pagination.setPrevious(currentPage - 1);
+                    }
+                    if (currentPage < pagination.getLast()) {
+                        pagination.setNext(currentPage + 1);
+                    } else{
+                        pagination.setNext(currentPage);
+                    }
+
                 }
-                pagination.setLast(PaginationHelper.getLastPageNumber(tariffList.size()));
 
 
                 int firstElementOnPageIndex = PaginationHelper.getFirstElementIndex(pagination.getCurrent());
@@ -54,14 +67,15 @@ public class TariffController extends HttpServlet {
 
                 request.setAttribute("pages", pagination);
                 request.setAttribute("tariffs", tariffsOnOnePage);
+                System.out.println(pagination);
 
-                request.getRequestDispatcher("WEB-INF/jsp/info.jsp").forward(request,response);
+                request.getRequestDispatcher("WEB-INF/jsp/info.jsp").forward(request, response);
 
 
             } catch (ServiceException e) {
                 e.printStackTrace();
             }
-        } else{
+        } else {
             response.sendRedirect("index.jsp");
         }
 

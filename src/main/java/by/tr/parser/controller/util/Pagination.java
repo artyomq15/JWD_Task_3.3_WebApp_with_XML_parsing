@@ -15,6 +15,8 @@ public class Pagination implements Serializable {
         first = 1;
         current = 1;
         previous = 1;
+        next = 1;
+        last = 1;
     }
 
     public int getFirst() {
@@ -25,18 +27,24 @@ public class Pagination implements Serializable {
         return previous;
     }
 
+    public void setPrevious(int previous) {
+        this.previous = previous;
+    }
+
     public int getCurrent() {
         return current;
     }
 
     public void setCurrent(int current) {
         this.current = current;
-        previous = current - 1;
-        next = current + 1;
     }
 
     public int getNext() {
         return next;
+    }
+
+    public void setNext(int next) {
+        this.next = next;
     }
 
     public int getLast() {

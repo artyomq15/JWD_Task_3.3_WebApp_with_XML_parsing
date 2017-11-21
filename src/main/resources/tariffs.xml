@@ -28,4 +28,394 @@
         <sms-price>0.06 BYN</sms-price>
         <internet-traffic>unlimit</internet-traffic>
     </tariff>
+
+    <tariff tariffing="12-second" connection-fee="2.5 BYN" favorite-number="5">
+        <name>Super</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.02 BYN</sms-price>
+        <internet-traffic>1.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN">
+        <name>Beezy</name>
+        <operator-name>Beeline</operator-name>
+        <payroll>15.6 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.01 BYN/min</out-network>
+            <to-landline>0.6 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN" favorite-number="3">
+        <name>Mini</name>
+        <operator-name>Velcom</operator-name>
+        <payroll>2.1 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.15 BYN/min</out-network>
+            <to-landline>0.32 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.053 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN">
+        <name>Super</name>
+        <operator-name>Life</operator-name>
+        <payroll>12.5 BYN</payroll>
+        <call-price>
+            <in-network>0.5 BYN/min</in-network>
+            <out-network>0.8 BYN/min</out-network>
+            <to-landline>1 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN" favorite-number="3">
+        <name>Lite</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>4.5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.12 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN" favorite-number="3">
+        <name>Real</name>
+        <operator-name>MTS</operator-name>
+        <payroll>14.5 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.05 BYN/min</out-network>
+            <to-landline>0.07 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.005 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="3.5 BYN" favorite-number="3">
+        <name>Absolute</name>
+        <operator-name>MTS</operator-name>
+        <payroll>5.6 BYN</payroll>
+        <call-price>
+            <in-network>0.05 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.5 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.0545 BYN</sms-price>
+        <internet-traffic>2 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN">
+        <name>Ultra</name>
+        <operator-name>MTS</operator-name>
+        <payroll>8 BYN</payroll>
+        <call-price>
+            <in-network>0.03 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.7 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.06 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="2.5 BYN" favorite-number="5">
+        <name>Super</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.02 BYN</sms-price>
+        <internet-traffic>1.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN">
+        <name>Beezy</name>
+        <operator-name>Beeline</operator-name>
+        <payroll>15.6 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.01 BYN/min</out-network>
+            <to-landline>0.6 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN" favorite-number="3">
+        <name>Mini</name>
+        <operator-name>Velcom</operator-name>
+        <payroll>2.1 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.15 BYN/min</out-network>
+            <to-landline>0.32 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.053 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN">
+        <name>Super</name>
+        <operator-name>Life</operator-name>
+        <payroll>12.5 BYN</payroll>
+        <call-price>
+            <in-network>0.5 BYN/min</in-network>
+            <out-network>0.8 BYN/min</out-network>
+            <to-landline>1 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN" favorite-number="3">
+        <name>Lite</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>4.5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.12 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN" favorite-number="3">
+        <name>Real</name>
+        <operator-name>MTS</operator-name>
+        <payroll>14.5 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.05 BYN/min</out-network>
+            <to-landline>0.07 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.005 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="3.5 BYN" favorite-number="3">
+        <name>Absolute</name>
+        <operator-name>MTS</operator-name>
+        <payroll>5.6 BYN</payroll>
+        <call-price>
+            <in-network>0.05 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.5 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.0545 BYN</sms-price>
+        <internet-traffic>2 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN">
+        <name>Ultra</name>
+        <operator-name>MTS</operator-name>
+        <payroll>8 BYN</payroll>
+        <call-price>
+            <in-network>0.03 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.7 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.06 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="2.5 BYN" favorite-number="5">
+        <name>Super</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.02 BYN</sms-price>
+        <internet-traffic>1.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN">
+        <name>Beezy</name>
+        <operator-name>Beeline</operator-name>
+        <payroll>15.6 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.01 BYN/min</out-network>
+            <to-landline>0.6 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN" favorite-number="3">
+        <name>Mini</name>
+        <operator-name>Velcom</operator-name>
+        <payroll>2.1 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.15 BYN/min</out-network>
+            <to-landline>0.32 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.053 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN">
+        <name>Super</name>
+        <operator-name>Life</operator-name>
+        <payroll>12.5 BYN</payroll>
+        <call-price>
+            <in-network>0.5 BYN/min</in-network>
+            <out-network>0.8 BYN/min</out-network>
+            <to-landline>1 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN" favorite-number="3">
+        <name>Lite</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>4.5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.12 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN" favorite-number="3">
+        <name>Real</name>
+        <operator-name>MTS</operator-name>
+        <payroll>14.5 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.05 BYN/min</out-network>
+            <to-landline>0.07 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.005 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="3.5 BYN" favorite-number="3">
+        <name>Absolute</name>
+        <operator-name>MTS</operator-name>
+        <payroll>5.6 BYN</payroll>
+        <call-price>
+            <in-network>0.05 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.5 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.0545 BYN</sms-price>
+        <internet-traffic>2 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN">
+        <name>Ultra</name>
+        <operator-name>MTS</operator-name>
+        <payroll>8 BYN</payroll>
+        <call-price>
+            <in-network>0.03 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.7 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.06 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="2.5 BYN" favorite-number="5">
+        <name>Super</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.02 BYN</sms-price>
+        <internet-traffic>1.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN">
+        <name>Beezy</name>
+        <operator-name>Beeline</operator-name>
+        <payroll>15.6 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.01 BYN/min</out-network>
+            <to-landline>0.6 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN" favorite-number="3">
+        <name>Mini</name>
+        <operator-name>Velcom</operator-name>
+        <payroll>2.1 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.15 BYN/min</out-network>
+            <to-landline>0.32 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.053 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="12-second" connection-fee="0 BYN">
+        <name>Super</name>
+        <operator-name>Life</operator-name>
+        <payroll>12.5 BYN</payroll>
+        <call-price>
+            <in-network>0.5 BYN/min</in-network>
+            <out-network>0.8 BYN/min</out-network>
+            <to-landline>1 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.1 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN" favorite-number="3">
+        <name>Lite</name>
+        <operator-name>LIFE</operator-name>
+        <payroll>4.5 BYN</payroll>
+        <call-price>
+            <in-network>0.01 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.4 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.12 BYN</sms-price>
+        <internet-traffic>0.5 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="5 BYN" favorite-number="3">
+        <name>Real</name>
+        <operator-name>MTS</operator-name>
+        <payroll>14.5 BYN</payroll>
+        <call-price>
+            <in-network>0.02 BYN/min</in-network>
+            <out-network>0.05 BYN/min</out-network>
+            <to-landline>0.07 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.005 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
 </t:tariffs>
