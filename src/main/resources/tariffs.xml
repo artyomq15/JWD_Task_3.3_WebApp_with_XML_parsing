@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t:tariffs xmlns:t="http://www.epam.tc.com/tariffs"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.epam.tc.com/tariffs tariffs.xsd">
+
+    <tariff tariffing="12-second" connection-fee="3.5 BYN" favorite-number="3">
+        <name>Absolute</name>
+        <operator-name>MTS</operator-name>
+        <payroll>5.6 BYN</payroll>
+        <call-price>
+            <in-network>0.05 BYN/min</in-network>
+            <out-network>0.1 BYN/min</out-network>
+            <to-landline>0.5 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.0545 BYN</sms-price>
+        <internet-traffic>2 GB</internet-traffic>
+    </tariff>
+
+    <tariff tariffing="minute" connection-fee="0 BYN">
+        <name>Ultra</name>
+        <operator-name>MTS</operator-name>
+        <payroll>8 BYN</payroll>
+        <call-price>
+            <in-network>0.03 BYN/min</in-network>
+            <out-network>0.2 BYN/min</out-network>
+            <to-landline>0.7 BYN/min</to-landline>
+        </call-price>
+        <sms-price>0.06 BYN</sms-price>
+        <internet-traffic>unlimit</internet-traffic>
+    </tariff>
+</t:tariffs>

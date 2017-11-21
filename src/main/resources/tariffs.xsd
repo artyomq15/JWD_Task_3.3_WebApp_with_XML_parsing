@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.epam.tc.com/tariffs"
+        xmlns:tns="http://www.epam.tc.com/tariffs">
+
+    <element name="tariffs">
+        <complexType>
+            <sequence>
+                <element name="tariff" type="tns:Tariff" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Tariff">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="operator-name" type="string"/>
+            <element name="payroll" type="tns:Price"/>
+            <element name="call-price" type="tns:Call-price"/>
+            <element name="sms-price">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="0.[0-9]{1,4} BYN"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="internet-traffic" type="tns:Traffic"/>
+        </sequence>
+        <attribute name="favorite-number" type="int" use="optional"/>
+        <attribute name="tariffing" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="12-second"/>
+                    <enumeration value="minute"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="connection-fee" type="tns:Price" use="required"/>
+    </complexType>
+
+    <simpleType name="Price">
+        <restriction base="string">
+            <pattern value="[0-9]*(.[0-9]*)? BYN"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="Call-price">
+        <sequence>
+            <element name="in-network" type="tns:Price-min"/>
+            <element name="out-network" type="tns:Price-min"/>
+            <element name="to-landline" type="tns:Price-min"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Price-min">
+        <restriction base="string">
+            <pattern value="[0-9]*(.[0-9]*)? BYN/min"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Traffic">
+        <restriction base="string">
+            <pattern value="[0-9]*(.[0-9]*)? GB|unlimit"/>
+        </restriction>
+    </simpleType>
+
+</schema>
