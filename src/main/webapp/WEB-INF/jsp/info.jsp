@@ -5,7 +5,7 @@
 <c:set var="pages" value="${requestScope.pages}"/>
 <html>
 <head>
-    <title>Title</title>
+    <title>Tariffs</title>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
@@ -40,29 +40,40 @@
     </c:forEach>
 </table>
 <div class="pages">
-    <div>
-        <c:if test="${pages.first != pages.current}">
+
+    <c:if test="${pages.first != pages.current && pages.first!= pages.previous}">
+        <div>
             <a href="/TariffController?page=${pages.first}"><c:out value="${pages.first}"/></a>
-        </c:if>
-    </div>
-    <div>
-        <c:if test="${pages.previous != pages.current && pages.first!= pages.previous}">
+        </div>
+        <div>...</div>
+    </c:if>
+
+
+    <c:if test="${pages.previous != pages.current}">
+        <div>
             <a href="/TariffController?page=${pages.previous}"><c:out value="${pages.previous}"/></a>
-        </c:if>
-    </div>
+        </div>
+    </c:if>
+
     <div>
         <b><a><c:out value="${pages.current}"/></a></b>
     </div>
-    <div>
-        <c:if test="${pages.next != pages.current && pages.last!= pages.next}">
+
+    <c:if test="${pages.next != pages.current}">
+        <div>
             <a href="/TariffController?page=${pages.next}"><c:out value="${pages.next}"/></a>
-        </c:if>
-    </div>
-    <div>
-        <c:if test="${pages.last != pages.current}">
+        </div>
+    </c:if>
+
+
+    <c:if test="${pages.last != pages.current && pages.last!= pages.next}">
+
+        <div>...</div>
+        <div>
             <a href="/TariffController?page=${pages.last}"><c:out value="${pages.last}"/></a>
-        </c:if>
-    </div>
+        </div>
+    </c:if>
+
 </div>
 </body>
 </html>

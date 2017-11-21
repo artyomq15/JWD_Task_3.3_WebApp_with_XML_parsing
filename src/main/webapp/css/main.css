@@ -13,7 +13,7 @@ tr, td, th{
     display: inline-block;
 
 }
-.pages>div{
+.pages div{
     float: left;
     width: 100px;
 }

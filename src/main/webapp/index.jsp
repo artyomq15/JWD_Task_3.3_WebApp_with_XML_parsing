@@ -3,7 +3,7 @@
 
 <html>
 <head>
-
+    <title>XML Parser</title>
 </head>
 <body>
     <form action="/TariffController" method="post">

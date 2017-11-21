@@ -1,6 +1,8 @@
 package by.tr.parser.controller;
 
+import by.tr.parser.constant.JspPath;
 import by.tr.parser.constant.ParserType;
+import by.tr.parser.constant.RedirectQuery;
 import by.tr.parser.controller.util.Pagination;
 import by.tr.parser.controller.util.PaginationHelper;
 import by.tr.parser.entity.Tariff;
@@ -14,22 +16,23 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import static by.tr.parser.constant.AttributeName.*;
+
 public class TariffController extends HttpServlet {
     private static final long serialVersionUID = -4628099127626697790L;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String parserType = request.getParameter("set_parser");
+        String parserType = request.getParameter(SET_PARSER);
         if (ParserType.contains(parserType)) {
-            request.getSession(true).setAttribute("parser", parserType);
-            response.sendRedirect("/TariffController?page=1");
+            request.getSession(true).setAttribute(PARSER, parserType);
+            response.sendRedirect(RedirectQuery.TO_FIRST_INFO_PAGE);
         } else {
-            System.out.println("not a parser");
+            request.getRequestDispatcher(JspPath.ERROR_PAGE).forward(request, response);
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Object parserObj = request.getSession(false).getAttribute("parser");
+        Object parserObj = request.getSession(false).getAttribute(PARSER);
         String parserString;
         if (parserObj != null) {
             parserString = String.valueOf(parserObj);
@@ -37,46 +40,27 @@ public class TariffController extends HttpServlet {
             try {
                 List<Tariff> tariffList = ServiceFactory.getInstance().getTariffService().getTariffs(parserType);
 
-                Pagination pagination = new Pagination();
+                String current = request.getParameter(PAGE);
+                int tariffListSize = tariffList.size();
+                Pagination pagination = PaginationHelper.getPagination(current, tariffListSize);
+                if (pagination == null) {
+                    request.getRequestDispatcher(JspPath.ERROR_PAGE).forward(request, response);
+                } else {
+                    int firstElementOnPageIndex = PaginationHelper.getFirstElementIndex(pagination.getCurrent());
+                    int lastElementOnPageIndex = PaginationHelper.getLastElementIndex(firstElementOnPageIndex, tariffListSize);
+                    List<Tariff> tariffsOnOnePage = tariffList.subList(firstElementOnPageIndex, lastElementOnPageIndex);
 
 
-                String current = request.getParameter("page");
-                int currentPage;
-                if (current != null) {
-                    currentPage = Integer.parseInt(current);
+                    request.setAttribute(PAGES, pagination);
+                    request.setAttribute(TARIFFS, tariffsOnOnePage);
 
-                    pagination.setCurrent(currentPage);
-                    pagination.setLast(PaginationHelper.getLastPageNumber(tariffList.size()));
-
-                    if (currentPage != pagination.getFirst()) {
-                        pagination.setPrevious(currentPage - 1);
-                    }
-                    if (currentPage < pagination.getLast()) {
-                        pagination.setNext(currentPage + 1);
-                    } else{
-                        pagination.setNext(currentPage);
-                    }
-
+                    request.getRequestDispatcher(JspPath.INFO_PAGE).forward(request, response);
                 }
-
-
-                int firstElementOnPageIndex = PaginationHelper.getFirstElementIndex(pagination.getCurrent());
-                int lastElementOnPageIndex = PaginationHelper.getLastElementIndex(firstElementOnPageIndex, tariffList.size());
-                List<Tariff> tariffsOnOnePage = tariffList.subList(firstElementOnPageIndex, lastElementOnPageIndex);
-
-
-                request.setAttribute("pages", pagination);
-                request.setAttribute("tariffs", tariffsOnOnePage);
-                System.out.println(pagination);
-
-                request.getRequestDispatcher("WEB-INF/jsp/info.jsp").forward(request, response);
-
-
             } catch (ServiceException e) {
                 e.printStackTrace();
             }
         } else {
-            response.sendRedirect("index.jsp");
+            response.sendRedirect(JspPath.START_PAGE);
         }
 
 
