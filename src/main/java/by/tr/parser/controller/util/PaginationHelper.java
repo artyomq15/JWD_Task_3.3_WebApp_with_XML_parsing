@@ -37,7 +37,6 @@ public class PaginationHelper {
         } else {
             return null;
         }
-
         pagination.setCurrent(currentPage);
         pagination.setLast(PaginationHelper.getLastPageNumber(size));
         if (currentPage != pagination.getFirst()) {

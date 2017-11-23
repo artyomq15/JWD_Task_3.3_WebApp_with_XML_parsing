@@ -50,14 +50,13 @@ public class TariffController extends HttpServlet {
                     int lastElementOnPageIndex = PaginationHelper.getLastElementIndex(firstElementOnPageIndex, tariffListSize);
                     List<Tariff> tariffsOnOnePage = tariffList.subList(firstElementOnPageIndex, lastElementOnPageIndex);
 
-
                     request.setAttribute(PAGES, pagination);
                     request.setAttribute(TARIFFS, tariffsOnOnePage);
 
                     request.getRequestDispatcher(JspPath.INFO_PAGE).forward(request, response);
                 }
             } catch (ServiceException e) {
-                e.printStackTrace();
+                request.getRequestDispatcher(JspPath.ERROR_PAGE).forward(request, response);
             }
         } else {
             response.sendRedirect(JspPath.START_PAGE);
