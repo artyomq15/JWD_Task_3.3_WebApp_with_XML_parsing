@@ -16,10 +16,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import static by.tr.parser.constant.AttributeName.*;
 
 public class TariffController extends HttpServlet {
+    private static final Logger logger = LogManager.getLogger(TariffController.class);
+
     private static final long serialVersionUID = -4628099127626697790L;
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String parserType = request.getParameter(SET_PARSER);
@@ -56,6 +62,7 @@ public class TariffController extends HttpServlet {
                     request.getRequestDispatcher(JspPath.INFO_PAGE).forward(request, response);
                 }
             } catch (ServiceException e) {
+                logger.error(e);
                 request.getRequestDispatcher(JspPath.ERROR_PAGE).forward(request, response);
             }
         } else {

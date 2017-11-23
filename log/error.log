@@ -1,0 +1,1 @@
+23:08:03.336 [ERROR] - [by.tr.parser.controller.TariffController] - by.tr.parser.service.exception.ServiceException: by.tr.parser.dao.exception.DAOException: by.tr.parser.dao.impl.exception.TariffSAXException: java.net.MalformedURLException
