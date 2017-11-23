@@ -5,10 +5,14 @@
 <c:set var="pages" value="${requestScope.pages}"/>
 <html>
 <head>
-    <title>Tariffs</title>
+    <title>Info</title>
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
+
+<a href="../../index.jsp">choose parser</a>
+<br/>
+<h1>Parsed with <c:out value="${sessionScope.parser}"/></h1>
 <table>
     <tr>
         <th>Name</th>
@@ -39,6 +43,7 @@
         </tr>
     </c:forEach>
 </table>
+<br/>
 <div class="pages">
 
     <c:if test="${pages.first != pages.current && pages.first!= pages.previous}">

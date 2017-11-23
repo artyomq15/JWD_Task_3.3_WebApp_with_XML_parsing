@@ -9,11 +9,13 @@ tr, td, th{
     text-align: center;
 }
 .pages{
+    text-align: center;
     margin: 20px auto;
-    display: inline-block;
 
 }
 .pages div{
     float: left;
+    display: inline-block;
     width: 100px;
 }
+

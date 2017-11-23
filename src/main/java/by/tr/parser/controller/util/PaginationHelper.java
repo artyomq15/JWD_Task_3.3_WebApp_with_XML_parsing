@@ -1,7 +1,7 @@
 package by.tr.parser.controller.util;
 
 public class PaginationHelper {
-    private static final int ELEMENTS_ON_PAGE = 4;
+    private static final int ELEMENTS_ON_PAGE = 5;
     private static final String INTEGER_PATTERN = "[0-9]+";
 
 

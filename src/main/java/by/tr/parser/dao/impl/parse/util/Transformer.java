@@ -12,6 +12,10 @@ public class Transformer {
         return TariffTagName.valueOf(tag.toUpperCase().replace(XML_DELIMITER,ENUM_DELIMITER));
     }
 
+    public static String getTagString(TariffTagName tag){
+        return String.valueOf(tag).toLowerCase().replace(ENUM_DELIMITER,XML_DELIMITER);
+    }
+
     public static String getAttrString(TariffAttrName attrName){
         return String.valueOf(attrName).toLowerCase().replace(ENUM_DELIMITER,XML_DELIMITER);
     }

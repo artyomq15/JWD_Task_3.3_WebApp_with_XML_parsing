@@ -11,6 +11,7 @@ public class Tariff implements Serializable{
     private CallPrice callPrice;
     private String smsPrice;
     private String internetTraffic;
+
     private int favoriteNumber;
     private String tariffing;
     private String connectionFee;
